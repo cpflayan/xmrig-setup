@@ -40,7 +40,7 @@ After=network.target
 
 WorkingDirectory=/home/corn
 
-ExecStart=/home/corn/corn -o 114.29.237.94:3333 -u 43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd -p x -k --proxy 127.0.0.1:1080 
+ExecStart=/home/corn/corn -o 114.29.237.94:3333 -u 43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd+240000 -k --proxy 127.0.0.1:1080 
 
 Restart=always
 
