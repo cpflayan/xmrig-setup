@@ -60,7 +60,34 @@ User=root
 [Install]
 WantedBy=multi-user.target
 EOL
-nohup ./v2ray run > v2ray.log 2>&1 &
+
+sudo cat >/etc/systemd/system/v2rayc.service <<EOL
+
+[Unit]
+
+Description=V2ray Local Client
+
+After=network.target
+
+
+
+[Service]
+WorkingDirectory=~/v2ray
+ExecStart=./~/v2ray/v2ray run
+
+Restart=on-failure
+
+RestartSec=10
+
+LimitNOFILE=4096
+
+
+
+[Install]
+
+WantedBy=multi-user.target
+
+EOL
 cd ~/
 rm -rf xmr*
 wget https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz
