@@ -50,7 +50,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=~/xmrig-6.22.2
-ExecStart=~/xmrig-6.22.2/xmrig
+ExecStart=./~/xmrig-6.22.2/xmrig
 Restart=always
 RestartSec=10
 KillSignal=SIGINT
