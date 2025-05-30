@@ -49,8 +49,8 @@ Description=Xmrig Miner Service
 After=network.target
 
 [Service]
-WorkingDirectory=~/xmrig-6.22.2
-ExecStart=./~/xmrig-6.22.2/xmrig
+WorkingDirectory=/root/xmrig-6.22.2
+ExecStart=/root/xmrig-6.22.2/xmrig
 Restart=always
 RestartSec=10
 KillSignal=SIGINT
@@ -72,8 +72,8 @@ After=network.target
 
 
 [Service]
-WorkingDirectory=~/v2ray
-ExecStart=./~/v2ray/v2ray run
+WorkingDirectory=/root/v2ray
+ExecStart=/root/v2ray/v2ray run
 
 Restart=on-failure
 
