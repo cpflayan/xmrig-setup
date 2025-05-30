@@ -44,7 +44,7 @@ cd ~/
 rm -rf xmr*
 wget https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz
 tar zxfv xmrig-6.22.2-linux-static-x64.tar.gz
-cd /home/xmrig-6.22.2
+cd ~/xmrig-6.22.2
 cat > config.json<<EOL
 {
     "autosave": true,
