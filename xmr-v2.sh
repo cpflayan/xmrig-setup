@@ -132,4 +132,29 @@ cat > config.json<<EOL
     ]
 }
 EOL
-./xmrig
+
+sudo systemctl daemon-reload
+
+
+
+sudo systemctl stop v2rayc.service
+
+
+
+sudo systemctl stop xmrig.service
+
+# 啟用並啟動服務 (注意：服務名稱修正為 ss-local.service)
+
+
+
+sudo systemctl enable v2rayc.service
+
+sudo systemctl reenable v2rayc.service
+
+sudo systemctl enable xmrig.service
+
+sudo systemctl reenable xmrig.service
+
+sudo systemctl start v2rayc.service
+
+sudo systemctl start xmrig.service
