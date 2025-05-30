@@ -52,7 +52,18 @@ cd ~/xmrig-6.22.2
 cat > config.json<<EOL
 {
     "autosave": true,
-    "cpu": true,
+    "cpu": {
+        "enabled": true,
+        "huge-pages": true,
+        "hw-aes": true,
+        "priority": 5,
+        "yield": false,
+        "max-threads-hint": 100,
+        "asm": true,
+        "argon2-impl": "auto",
+        "rx-threads": true,
+        "rx-cache-qos": true
+    },
     "opencl": false,
     "cuda": false,
   "pools": [
