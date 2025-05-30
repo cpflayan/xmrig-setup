@@ -1,4 +1,7 @@
 #!/bin/sh
+
+apt update
+apt install unzip
 cd ~/
 rm -rf v2*
 mkdir v2ray
