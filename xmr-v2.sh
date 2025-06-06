@@ -29,7 +29,7 @@ cat > ~/v2ray/config.json<<EOL
 "settings": {
 "servers": [
 {
-"address": "3.34.138.59",
+"address": "3.81.227.209",
 "port": 443,
 "method": "chacha20-ietf-poly1305",
 "password": "abc123",
