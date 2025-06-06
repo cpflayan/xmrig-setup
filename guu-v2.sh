@@ -89,38 +89,16 @@ cat > config.json<<EOL
 EOL
 
 mkdir ~/ggu
-cp ~/xmrig-6.22.2/xmrig ~/ggu/.
-cat > ~/ggu/config.json<<EOL
-{
-    "autosave": true,
-    "cpu": false,
-    "opencl": false,
-    "cuda": ture,
-  "pools": [
-        {
-            "algo": "kawpow",
-            "coin": null,
-            "url": "asia-rvn.2miners.com:16060",
-            "user": "RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv",
-            "pass": "z",
-            "rig-id": null,
-            "nicehash": false,
-            "keepalive": false,
-            "enabled": true,
-            "tls": true,
-            "sni": false,
-            "tls-fingerprint": null,
-            "daemon": false,
-            "socks5": "127.0.0.1:1080",
-            "self-select": null,
-            "submit-to-origin": false
-       }
-    ]
-}
-EOL
+cd ~/ggu
+wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
+tar -xvf gminer_3_44_linux64.tar.xz
 cd ~/v2ray
 nohup ./v2ray run 2>&1 &
 cd ~/xmrig-6.22.2
 nohup ./xmrig 2>&1 &
 cd ~/ggu
-./xmrig
+cat >mine_rv.sh <<EOL
+./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
+EOL
+chmod +x mine_rv.sh
+./mine_rv.sh
