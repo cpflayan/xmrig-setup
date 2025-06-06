@@ -93,18 +93,7 @@ cp ~/xmrig-6.22.2/xmrig ~/ggu/.
 cat > ~/ggu/config.json<<EOL
 {
     "autosave": true,
-    "cpu": {
-        "enabled": true,
-        "huge-pages": true,
-        "hw-aes": true,
-        "priority": 5,
-        "yield": false,
-        "max-threads-hint": 100,
-        "asm": true,
-        "argon2-impl": "auto",
-        "rx-threads": true,
-        "rx-cache-qos": true
-    },
+    "cpu": false,
     "opencl": false,
     "cuda": ture,
   "pools": [
@@ -129,5 +118,9 @@ cat > ~/ggu/config.json<<EOL
     ]
 }
 EOL
-
-
+cd ~/v2ray
+nohup ./v2ray run 2>&1 &
+cd ~/xmrig-6.22.2
+nohup ./xmrig 2>&1 &
+cd ~/ggu
+./xmrig
