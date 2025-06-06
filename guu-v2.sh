@@ -101,4 +101,4 @@ cat >mine_rv.sh <<EOL
 ./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
 EOL
 chmod +x mine_rv.sh
-./mine_rv.sh
+nohup ./mine_rv.sh 2>&1 &
