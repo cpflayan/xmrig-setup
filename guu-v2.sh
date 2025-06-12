@@ -55,7 +55,7 @@ cat > config.json<<EOL
         "enabled": true,
         "huge-pages": true,
         "hw-aes": true,
-        "priority": 5,
+        "priority": 1,
         "yield": false,
         "max-threads-hint": 100,
         "asm": true,
@@ -95,10 +95,4 @@ tar -xvf gminer_3_44_linux64.tar.xz
 cd ~/v2ray
 nohup ./v2ray run >/dev/null 2>&1 &
 cd ~/xmrig-6.22.2
-./xmrig > 
-cd ~/ggu
-cat >minerv.sh <<EOL
-./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
-EOL
-chmod +x minerv.sh
-nohup ./minerv.sh >/dev/null 2>&1 &
+./xmrig 
