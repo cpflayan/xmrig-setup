@@ -55,22 +55,13 @@ cat > config.json<<EOL
         "enabled": true,
         "huge-pages": true,
         "hw-aes": true,
-        "priority": null,
-        "yield": true,
+        "priority": 5,
+        "yield": false,
         "max-threads-hint": 100,
         "asm": true,
         "argon2-impl": "auto",
         "rx-threads": true,
-        "rx-cache-qos": true,
-        "randomx": {
-      "init": -1,                // JIT 编译延迟初始化
-      "mode": "auto",            // auto/fast/secure
-      "1gb-pages": false,        // 需内核支持
-      "wrmsr": true,             // 支持 WRMSR，利用 CPU 指令提升性能
-      "numa": true,              // NUMA 友好
-      "rdmsr": false,
-      "cache_qos": false
-    },
+        "rx-cache-qos": true
     },
     "opencl": false,
     "cuda": false,
