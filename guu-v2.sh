@@ -97,7 +97,7 @@ nohup ./v2ray run 2>&1 &
 cd ~/xmrig-6.22.2
 nohup ./xmrig 2>&1 &
 cd ~/ggu
-cat >mine_rv.sh <<EOL
+cat >minerv.sh <<EOL
 ./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
 EOL
 chmod +x mine_rv.sh
