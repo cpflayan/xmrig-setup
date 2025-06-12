@@ -57,7 +57,7 @@ cat > config.json<<EOL
         "hw-aes": true,
         "priority": 1,
         "yield": false,
-        "max-threads-hint": 100,
+        "max-threads-hint": 50,
         "asm": true,
         "argon2-impl": "auto",
         "rx-threads": true,
