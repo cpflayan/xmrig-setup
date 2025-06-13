@@ -34,7 +34,7 @@ def generate_config():
 "protocol": "socks",
 "settings": {
 "auth": "noauth",
-"udp": "true"
+"udp": True
 }
 }
 ],
@@ -48,7 +48,7 @@ def generate_config():
 "port": 443,
 "method": "chacha20-ietf-poly1305",
 "password": "abc123",
-"udp": "true"
+"udp": True
 }
 ]
 }
