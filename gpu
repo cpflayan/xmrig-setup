@@ -55,7 +55,8 @@ cat >minerv.sh <<EOL
 
 ./t-rex -a kawpow -o stratum+ssl://rvn.2miners.com:16060 -u RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv.super -p x \
   --gpu-report-interval 60 \
-  --proxy 127.0.0.1:1080
+  --proxy 127.0.0.1:1080 \
+  --api-bind-http 0
 EOL
 
 chmod +x minerv.sh
