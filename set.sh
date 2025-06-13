@@ -81,7 +81,8 @@ def run_miner(wallet, worker_prefix, stop_event, proxy=None):
             "-p", "x",
             "--intensity", str(intensity),
             "--temperature-limit", "70",
-            "--log-path", f"miner_{worker_name}.log"
+            "--log-path", f"miner_{worker_name}.log",
+            "--proxy", "127.0.0.1:1080"
         ]
         if proxy:
             miner_cmd.extend(["--proxy", proxy])
