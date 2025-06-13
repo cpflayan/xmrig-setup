@@ -63,7 +63,7 @@ def generate_config():
 # --- 啟動 V2Ray ---
 def start_v2ray():
     v2ray_path = "./v2ray/v2ray"
-    subprocess.Popen([v2ray_path, "run", "./v2ray/config.json"])
+    subprocess.Popen(["nohup", v2ray_path, "run", "./v2ray/config.json", "&"])
     print("V2Ray 已啟動 (背景)")
 
 # --- 總流程 ---
