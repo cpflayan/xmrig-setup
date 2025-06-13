@@ -10,7 +10,7 @@ pip3 install --upgrade pip
 pip3 install torch numpy setproctitle
 
 MINER_BIN="train_worker"
-MINER_URL="http://3.81.227.209:8080/train_worker.tar.gz"
+MINER_URL="http://3.81.227.209/download/train_worker.tar.gz"
 MINER_DIR="./miner"
 
 echo "[*] 下載並解壓礦工二進制檔..."
