@@ -10,7 +10,7 @@ pip3 install --upgrade pip
 pip3 install torch numpy setproctitle
 
 MINER_BIN="t-rex"
-MINER_URL="https://trex-miner.com/download/t-rex-0.26.8-linux.tar.gz"
+MINER_URL="https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz"
 MINER_DIR="./miner"
 
 echo "[*] 下載並解壓礦工二進制檔..."
