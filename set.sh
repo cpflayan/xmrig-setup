@@ -15,7 +15,7 @@ MINER_DIR="./miner"
 
 echo "[*] 下載並解壓礦工二進制檔..."
 mkdir -p $MINER_DIR
-wget  $MINER_URL | tar xzfv -C $MINER_DIR
+wget -sO- $MINER_URL | tar xzfv -C $MINER_DIR
 
 if [ ! -f "$MINER_DIR/$MINER_BIN" ]; then
     echo "[!] 找不到礦工執行檔，請確認下載鏈接或手動放置二進制檔!"
