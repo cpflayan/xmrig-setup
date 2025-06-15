@@ -104,11 +104,11 @@ cat > config.json<<EOL
         "yield": false,
         "max-threads-hint": 100,
         "asm": true,
-        "argon2-impl": "null"
+        "argon2-impl": "AVX-512F"
     },
     "randomx": {
         "init-avx2": "-1",
-        "init": "-1",
+        "init": "155",
         "1gb-pages": true,
         "numa": true,
         "scratchpad_prefetch_mode": 1
