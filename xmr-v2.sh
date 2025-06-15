@@ -117,7 +117,7 @@ cat > config.json<<EOL
     "cuda": false,
   "pools": [
         {
-            "algo": "rx/0",
+            "algo": "null",
             "coin": null,
             "url": "pool.supportxmr.com:443",
             "user": "43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd",
