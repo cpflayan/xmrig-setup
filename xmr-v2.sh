@@ -95,16 +95,16 @@ tar zxfv xmrig-6.22.2-linux-static-x64.tar.gz
 cd ~/xmrig-6.22.2
 cat > config.json<<EOL
 {
-    "autosave": true,
+    "autosave": false,
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "hw-aes": true,
+        "hw-aes": "",
         "priority": 5,
         "yield": false,
         "max-threads-hint": 100,
         "asm": true,
-        "argon2-impl": "auto",
+        "argon2-impl": "",
         "rx-threads": true,
         "rx-cache-qos": true
     },
