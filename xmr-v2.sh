@@ -112,7 +112,7 @@ cat > config.json<<EOL
         "1gb-pages": true,
         "numa": true,
         "scratchpad_prefetch_mode": 1
-    }
+    },
     "opencl": false,
     "cuda": false,
   "pools": [
