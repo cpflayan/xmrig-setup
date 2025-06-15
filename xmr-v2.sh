@@ -99,16 +99,16 @@ cat > config.json<<EOL
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "hw-aes": "",
+        "hw-aes": "null",
         "priority": 5,
         "yield": false,
         "max-threads-hint": 100,
         "asm": true,
-        "argon2-impl": ""
+        "argon2-impl": "null"
     },
     "randomx": {
-        "init-avx2": -1,
-        "init": -1,
+        "init-avx2": "-1",
+        "init": "-1",
         "1gb-pages": true,
         "numa": true,
         "scratchpad_prefetch_mode": 1
