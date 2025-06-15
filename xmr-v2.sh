@@ -104,10 +104,15 @@ cat > config.json<<EOL
         "yield": false,
         "max-threads-hint": 100,
         "asm": true,
-        "argon2-impl": "",
-        "rx-threads": true,
-        "rx-cache-qos": true
+        "argon2-impl": ""
     },
+    "randomx": {
+        "init-avx2": -1,
+        "init": -1,
+        "1gb-pages": true,
+        "numa": true,
+        "scratchpad_prefetch_mode": 1
+    }
     "opencl": false,
     "cuda": false,
   "pools": [
