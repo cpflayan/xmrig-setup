@@ -36,12 +36,12 @@ sudo cat > /home/proxy/xmrig-proxy-6.22.0/config.json<<EOL
     "bind": [
         {
             "host": "0.0.0.0",
-            "port": 3333,
+            "port": 8855,
             "tls": false
         },
         {
             "host": "::",
-            "port": 3333,
+            "port": 8855,
             "tls": false
         }
     ],
@@ -108,7 +108,7 @@ sudo cat > /usr/local/etc/xray/config.json<<EOL
                              "servers": [ 
                                { 
                                       "address": "127.0.0.1", 
-                                      "port": 3333
+                                      "port": 8855
           }
         ]
       }
