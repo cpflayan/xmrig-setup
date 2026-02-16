@@ -17,7 +17,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/xmrig/xmrig-6.22.2
-ExecStart=/home/xmrig/xmrig-6.22.2/xmrig -o 114.29.237.94:3333 -u 43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd -p x --nicehash -k --proxy 127.0.0.1:1080 
+ExecStart=/home/xmrig/xmrig-6.22.2/xmrig -o 155.248.227.196:8855 -u 8B5ERk1rDHzEyxhTMDjENRG1gVqtsWnTx78kjoPNARYYCwXErauWfjjdz4mSwhSBoqPmEiLeSxkw5irLmSCyG7qGDHfhjWi -p x --nicehash -k --proxy 127.0.0.1:1080 
 Restart=always
 RestartSec=10
 KillSignal=SIGINT
@@ -65,7 +65,7 @@ EOL
 # 建立 Shadowsocks 配置檔
 cat >/etc/shadowsocks-libev/config.json <<EOL
 {
-    "server": "114.29.237.94",
+    "server": "155.248.227.196",
     "server_port": 443,
     "local_address": "127.0.0.1",
     "local_port": 1080,
@@ -96,4 +96,5 @@ sudo systemctl reenable ss-local.service
 sudo systemctl start ss-local.service
 
 sudo systemctl start xmrig1.service
+
 
