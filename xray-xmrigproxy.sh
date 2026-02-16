@@ -57,7 +57,7 @@ sudo cat > /home/proxy/xmrig-proxy-6.22.0/config.json<<EOL
             "algo": "rx/0",
             "coin": null,
             "url": "pool.supportxmr.com:9000",
-            "user": "43cx2hYimLw9YkAYxLG8Vg2TStTL3r6XmbfDfBiCY9MCViYCCaYpEzr1BUCmZTquQwLpg7Sb1FhrV4qR5EXWwvkgKdSHVLd",
+            "user": "8B5ERk1rDHzEyxhTMDjENRG1gVqtsWnTx78kjoPNARYYCwXErauWfjjdz4mSwhSBoqPmEiLeSxkw5irLmSCyG7qGDHfhjWi",
             "pass": "twcc",
             "rig-id": null,
             "keepalive": true,
