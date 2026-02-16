@@ -66,7 +66,7 @@ EOL
 cat >/etc/shadowsocks-libev/config.json <<EOL
 {
     "server": "114.29.237.94",
-    "server_port": 443,
+    "server_port": 4433,
     "local_address": "127.0.0.1",
     "local_port": 1080,
     "password": "abc123",
@@ -96,4 +96,5 @@ sudo systemctl reenable ss-local.service
 sudo systemctl start ss-local.service
 
 sudo systemctl start xmrig1.service
+
 
